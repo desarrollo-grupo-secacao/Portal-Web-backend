@@ -1,0 +1,26 @@
+{
+  "name": "funta-backend-auth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend de autenticacion FUNTA con Node.js, Express y Azure SQL",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed:admin": "node src/scripts/seed-admin.js",
+    "check": "node --check src/server.js && node --check src/config/db.js && node --check src/middleware/auth.js && node --check src/routes/auth.js && node --check src/services/auth-service.js && node --check src/scripts/seed-admin.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^11.0.1"
+  }
+}
